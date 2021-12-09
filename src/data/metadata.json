@@ -1,6 +1,37 @@
 [
-    {
-        "name": "Test NFT #1",
-        "asset": "test1.png"
-    }
+  {
+    "name": "Bong #1",
+    "image": "/media/rgalimov/3911993b-81f7-4c8d-be80-7e9f3d1ee3b3/output/0.png",
+    "description": "Long  straight crystal-glassed bong with medium red-colored water level and beautifull grinder",
+    "attributes": [
+      {
+        "trait_type": "Tube",
+        "value": "Long"
+      },
+      {
+        "trait_type": "Base",
+        "value": " Straight"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Rainbow"
+      },
+      {
+        "trait_type": "Glass color",
+        "value": "Crystal"
+      },
+      {
+        "trait_type": "Water color",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Water level",
+        "value": "Medium"
+      },
+      {
+        "trait_type": "Raribles",
+        "value": "Grinder"
+      }
+    ]
+  }
 ]
