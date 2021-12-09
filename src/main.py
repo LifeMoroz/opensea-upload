@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import time
 
@@ -32,13 +33,21 @@ def main():
     metadata = json.load(open(os.path.join(os.getcwd(), "data", "metadata.json")))
     first_upload = True
     for i, data in enumerate(metadata):
-        uploader.upload(data)
+        try:
+            uploader.upload(data)
+        except Exception:
+            logging.exception("Failed load")
+            print(data)
         if first_upload:
             uploader.sign_transaction()
             first_upload = False
         time.sleep(2)
-        uploader.sell()
-        time.sleep(1)
+        try:
+            uploader.sell()
+            time.sleep(1)
+        except Exception:
+            logging.exception("Failed sell")
+            print(data)
     # Close
     uploader.close()
 
